@@ -21,3 +21,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	DxLib_End();
 
 }
+
+//‰´‚Í‘¾ŒÛ‚Ì’Bl
