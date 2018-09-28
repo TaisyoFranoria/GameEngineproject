@@ -6,6 +6,7 @@ public:
 
 	int state;
 	int MAX_state;
+	bool Engine_Alive;
 
 	Engine();
 	~Engine();

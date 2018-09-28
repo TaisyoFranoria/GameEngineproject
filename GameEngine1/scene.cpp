@@ -17,12 +17,19 @@ void scene::init() {
 }
 
 void scene::final() {
+	delete map;
 	delete players;
 	delete target;
+	map = nullptr;
+	players = nullptr;
+	target = nullptr;
+	if (map != nullptr || players != nullptr || target != nullptr) {
+		DebugBreak();
+	}
 }
 
 void scene::update() {
-	players->Move();
+	players->update();
 }
 
 void scene::draw() {

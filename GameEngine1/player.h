@@ -50,6 +50,5 @@ public:
 	void Move();
 	void View();
 	void boost();
-	void All(player* PL);
-	
+	void update();
 };

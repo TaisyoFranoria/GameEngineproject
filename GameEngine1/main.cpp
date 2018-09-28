@@ -9,14 +9,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	Engine* engine = new Engine();
+	if (engine == nullptr) DebugBreak();
 
 	while (ProcessMessage() != -1 && !ScreenFlip() && !ClearDrawScreen()) {
 		engine->update();
 		engine->view();
+		if (engine->Engine_Alive == false)break;
 	}
 
 	delete engine;
-
+	engine = nullptr;
+	if (engine != nullptr)DebugBreak();
 
 	DxLib_End();
 

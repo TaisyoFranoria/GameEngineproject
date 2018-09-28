@@ -9,7 +9,7 @@
 player::player(int x, int y) {
 	//ƒhƒbƒgŠG
 	//LoadDivGraph("img/charS01.png", 24, 6, 4, 32, 48, gh);
-	LoadDivGraph("img/charS02.png", 24, 6, 4, 32, 48, ghg);
+	//LoadDivGraph("img/charS02.png", 24, 6, 4, 32, 48, ghg);
 
 	//
 	for (int j = 0; j < 56; j++) {
@@ -230,7 +230,8 @@ void player::View() {
 			DrawExtendGraph(x - width / 4, y - height / 4, x + width / 4, y + height / 4, gh[30], TRUE);
 		}
 		if (walkvec == 9) {
-			DrawExtendGraph(x - width / 4, y - height / 4, x + width / 4, y + height / 4, gh[31], TRUE);
+			DrawExtendGraph(x - width / 4, y - height / 4, x + width / 4, y + height / 4, gh[31], TRUE)
+				;
 		}
 		if (walkvec == 1) {
 			DrawExtendGraph(x - width / 4, y - height / 4, x + width / 4, y + height / 4, gh[25], TRUE);
@@ -407,29 +408,10 @@ void player::boost() {
 
 }
 
-void player::All(player* PL) {
-	if (CheckHitKey(KEY_INPUT_SPACE) && boost_Gage >= 0.0 && OVERHEAT == false) {
-		boost();
-		boost();
-		boost();
-		boost();
-		boost();
+void player::update() {
+	Move();
+	Move();
+	if (CheckHitKey(KEY_INPUT_SPACE)) {
 		boost();
 	}
-	if (boost_Gage <= 5.0) boost_Gage += 0.01;
-	if (boost_Gage >= 5.0) { OVERHEAT = false; OVERHEAT_P = 0; }
-	if (OVERHEAT == false && stan == false && ableWalk) Move();
-	if (OVERHEAT == false && stan == false && ableWalk) Move();
-	if (OVERHEAT == false && stan == false && ableWalk) Move();
-	if (OVERHEAT == false && stan == false && ableWalk) Move();
-	//if (CheckHitKey(KEY_INPUT_Z))skill1();
-	//if (CheckHitKey(KEY_INPUT_X))skill2();
-	//if (CheckHitKey(KEY_INPUT_C))skill3(PL);
-	walk_now = false;
-	View();
-	boostFlag = false;
-	if (HP >= HP_MAX)HP = HP_MAX;
-	if (SP >= SP_MAX)SP = SP_MAX;
-	skill3flag = false;
-
 }
