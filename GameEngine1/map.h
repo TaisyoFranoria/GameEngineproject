@@ -8,6 +8,7 @@ public:
 	int mapgraph;
 
 	Map(int num);
+	~Map();
 	void View();
 	void All();
 };

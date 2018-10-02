@@ -54,6 +54,10 @@ player::player(int x, int y) {
 	DEF = 0;
 }
 
+player::~player() {
+
+}
+
 void player::AnimationView(int animState, int firstNum) {
 	//(*1)‚ÍŠ®¬‚ÌÛ‚ÉÁ‚·B‚à‚Æ‚Íi–2j
 	if (skill3flag) {

@@ -45,6 +45,7 @@ public:
 
 	
 	player(int x,int y);
+	~player();
 
 	void AnimationView(int animState, int firstNum);
 	void Move();

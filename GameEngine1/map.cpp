@@ -65,6 +65,10 @@ Map::Map(int num) {
 
 }
 
+Map::~Map() {
+
+}
+
 //–¼‘O‚Ì’Ê‚èŒ©‚©‚¯‚É‚©‚©‚í‚éŠÖ”@
 void Map::View() {
 	DrawGraph(0, 0, mapgraph, TRUE);
