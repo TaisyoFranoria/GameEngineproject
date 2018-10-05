@@ -2,7 +2,11 @@
 
 
 //csvファイルに記述されている判定、画像ファイルからのマップの見た目、この二つの要素を定義したMapクラス（宣言はヘッだMap.hにてすでに行っている）
-
+/*
+画像を読み込む
+string型変数＝画像の名前（string） + std::tostring(識別番号) + ".png"
+LoadGraph(変数);
+*/
 Map::Map(int num) {
 
 
@@ -66,7 +70,7 @@ Map::Map(int num) {
 }
 
 Map::~Map() {
-
+	DeleteGraph(mapgraph);
 }
 
 //名前の通り見かけにかかわる関数　

@@ -13,6 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\player">
+      <UniqueIdentifier>{663206d1-8fd8-4b6f-beda-c60ee93b119a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\player">
+      <UniqueIdentifier>{189f7a06-9d4e-4832-874f-fc0e77b64f3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\enemy">
+      <UniqueIdentifier>{f93fb762-2b8d-4c85-9f93-073d7704cc5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\event">
+      <UniqueIdentifier>{c23291c8-71d9-4ec4-90bd-109d9810cfa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\map">
+      <UniqueIdentifier>{6895fee3-714a-4eab-88fc-d3856d10d48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\scene">
+      <UniqueIdentifier>{dc499926-9ceb-45d8-916b-8b8f75527859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\enemy">
+      <UniqueIdentifier>{e1432493-ff6a-4cf4-a9ed-c8b2b6695c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\event">
+      <UniqueIdentifier>{4fbfdda7-9b7b-4ad7-942d-fb8f32627750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\map">
+      <UniqueIdentifier>{72e37e4c-fcb1-40aa-bb31-028ba5644cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\scene">
+      <UniqueIdentifier>{b7d00c5d-f6de-44c6-8f9f-e6f8df44df99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -22,13 +52,13 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="player.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\player</Filter>
     </ClCompile>
     <ClCompile Include="scene.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\scene</Filter>
     </ClCompile>
     <ClCompile Include="map.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,22 +69,22 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="map.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="event.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="enemy.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\player</Filter>
     </ClInclude>
     <ClInclude Include="graphX.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\player</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>ヘッダー ファイル\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>ヘッダー ファイル\event</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>ヘッダー ファイル\map</Filter>
     </ClInclude>
     <ClInclude Include="scene.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

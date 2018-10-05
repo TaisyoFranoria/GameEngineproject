@@ -55,7 +55,9 @@ player::player(int x, int y) {
 }
 
 player::~player() {
-
+	for (int i = 0; i < sizeof(gh) / sizeof(gh[0]);i++) {
+		DeleteGraph(gh[i]);
+	}
 }
 
 void player::AnimationView(int animState, int firstNum) {

@@ -21,8 +21,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	engine = nullptr;
 	if (engine != nullptr)DebugBreak();
 
+
+	InitSoundMem();
+	InitGraph();
 	DxLib_End();
 
+	return 0;
 }
 
 //‰´‚Í‘¾ŒÛ‚Ì’Bl
