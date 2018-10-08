@@ -35,7 +35,8 @@ player::player(int x, int y) {
 	speed = 2;
 	targetX = this->x;
 	targetY = this->y;
-	boost_Gage = 5.0;
+	boost_Gage_Max = 5.0;
+	boost_Gage = boost_Gage_Max;
 	skill1stan = 0;
 	skill2stan = 0;
 	skill3stan = 0;
@@ -414,10 +415,27 @@ void player::boost() {
 
 }
 
-void player::update() {
-	Move();
-	Move();
-	if (CheckHitKey(KEY_INPUT_SPACE)) {
-		boost();
+void player::R_boost() {
+	if(boost_Gage<=boost_Gage_Max)boost_Gage += 0.01;
+	if (OVERHEAT&&boost_Gage>=5.0) {
+		OVERHEAT = false;
 	}
+}
+
+void player::FastMove(int Run_num) {
+	for (int i = 0; i < Run_num; i++)Move();
+}
+
+void player::BoostGear(int Run_num) {
+	for (int i = 0; i < Run_num; i++)boost();
+}
+
+void player::update() {
+	if (OVERHEAT==false) {
+		FastMove(4);
+		if (CheckHitKey(KEY_INPUT_SPACE)) {
+			BoostGear(7);
+		}
+	}
+	R_boost();
 }

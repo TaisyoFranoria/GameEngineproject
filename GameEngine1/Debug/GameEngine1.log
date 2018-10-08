@@ -1,3 +1,4 @@
 ﻿  player.cpp
-c:\users\taisy\documents\gameengineproject\gameengine1\player.cpp(405): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\users\taisy\documents\gameengineproject\gameengine1\player.cpp(406): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\users\taisy\documents\gameengineproject\gameengine1\player.cpp(419): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
   GameEngine1.vcxproj -> C:\Users\taisy\Documents\GameEngineproject\GameEngine1\Debug\GameEngine1.exe

@@ -25,6 +25,7 @@ public:
 	int speed;
 	int targetX, targetY;
 	float boost_Gage;
+	float boost_Gage_Max;
 
 	//デバッグ用変数
 	int OVERHEAT_P;
@@ -51,5 +52,8 @@ public:
 	void Move();
 	void View();
 	void boost();
+	void R_boost();
+	void FastMove(int Run_num);
+	void BoostGear(int Run_num);
 	void update();
 };
