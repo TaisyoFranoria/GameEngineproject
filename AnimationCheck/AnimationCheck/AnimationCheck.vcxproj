@@ -151,12 +151,14 @@
     <ClCompile Include="animItem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="scene.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationEngine2D.h" />
     <ClInclude Include="animItem.h" />
     <ClInclude Include="io.h" />
     <ClInclude Include="scene.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

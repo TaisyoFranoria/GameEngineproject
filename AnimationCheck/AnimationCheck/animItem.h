@@ -5,15 +5,24 @@
 
 class animItem {
 public:
-	int x;
-	int y;
 	std::vector<int> gra;
-	int animLength;
+	int play_time;
 	int speed;
+	int counter;
 
 	animItem();
 	~animItem();
 	void init();
 	void final();
-	void AnimGraph_Load();
+	void update();
+	void draw();
+	
+
+private:
+	int x;
+	int y;
+	int limit;
+
+	void AnimGraph_Load(std::string name);
+	int SPEEDtoLIMIT(int speed);
 };
