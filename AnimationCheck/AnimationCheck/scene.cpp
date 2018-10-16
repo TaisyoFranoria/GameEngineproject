@@ -22,5 +22,5 @@ void scene::update() {
 }
 
 void scene::draw() {
-	DrawFormatString(0,0,GetColor(255,255,255),"",anim_);
+	DrawFormatString(0,0,GetColor(255,255,255),"AnimLength:%d",anim_->animLength);
 }

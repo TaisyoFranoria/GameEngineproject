@@ -9,16 +9,15 @@ animItem::~animItem() {
 }
 
 void animItem::init() {
-	AnimGraph_Load();
+	AnimGraph_Load(shikimitest);
 }
 
 void animItem::final() {
 
 }
 
-void animItem::AnimGraph_Load(){
-	std::string fileh = "file\\";
-	const char* s_png = ".png";
+void animItem::AnimGraph_Load(std::string name){
+	std::string fileh = "img\Animation\"+name+"\";
 	std::string filename;
 	for (int i = 0; i < 15; i++) {
 		filename = fileh + std::to_string(i) + ".png";
