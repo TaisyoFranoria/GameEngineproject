@@ -15,9 +15,10 @@ void animItem::init() {
 	play_time = 0;
 	counter = 0;
 	
-	AnimGraph_Load("shikimitest");
+	//可変可能にするにはここに変更を加える。(現時点ではサンプルのみ)
+	AnimGraph_Load("sample");
 
-	if (gra.size()>=20) {
+	if (gra.size()>=50) {
 		speed = 5;
 	}
 	else speed = -5;//10が最速
@@ -47,17 +48,19 @@ void animItem::draw() {
 }
 
 void animItem::AnimGraph_Load(std::string name){
-
+	bool success = false;
 	std::string fileh = "img/animation/" + name + "/";
 	std::string filename;
-	for (int i = 0; i < 15; i++) {
+	for (int i = 0; i < 100; i++) {
 		filename = fileh + std::to_string(i) + ".png";
 		int a = LoadGraph(filename.c_str());
 		if (a != -1) {
 			this->gra.push_back(a);
+			success = true;
 		}
 
 	}
+	if (!success)this->gra.push_back(LoadGraph("img/animation/nodata.png"));
 }
 
 int animItem::SPEEDtoLIMIT(int speed) {

@@ -2,7 +2,7 @@
 #include"AnimationEngine2D.h"
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 
 {
-	SetMainWindowText("CheckAnimation");
+	SetMainWindowText("２Dアニメーションチェッカー");
 	SetGraphMode(640, 480, 32);
 	ChangeWindowMode(TRUE);
 	if (DxLib_Init() == -1)return -1;

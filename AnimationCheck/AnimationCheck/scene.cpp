@@ -28,6 +28,7 @@ void scene::update() {
 }
 
 void scene::draw() {
+	DrawGraph(0, 0, ui->GRID, TRUE);
 
 	anim_->draw();
 	ui->draw();

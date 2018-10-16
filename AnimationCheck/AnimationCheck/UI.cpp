@@ -9,6 +9,7 @@ UI::~UI(){
 }
 
 void UI::init() {
+	GRID          = LoadGraph("img/UI/mas.png");
 	G_frame       = LoadGraph("img/UI/frame.png");
 	G_play_Button = LoadGraph("img/UI/PlayButton.png");
 	G_stop_Button = LoadGraph("img/UI/StopButton.png");
@@ -16,6 +17,7 @@ void UI::init() {
 	G_speed_UP1   = LoadGraph("img/UI/UP_1.png");
 	G_speed_Down0 = LoadGraph("img/UI/DOWN_0.png");
 	G_speed_Down1 = LoadGraph("img/UI/DOWN_1.png");
+	LOGO          = LoadGraph("img/UI/LOGO.png");
 
 	Play = true;
 	UP_down = false;
@@ -71,6 +73,8 @@ void UI::draw() {
 
 	if (!DOWN_down)DrawGraph(530,337,G_speed_Down0,TRUE);
 	else DrawGraph(530, 337, G_speed_Down1, TRUE);
+
+	DrawGraph(430, 50, LOGO,TRUE);
 }
 
 void UI::input_wait() {

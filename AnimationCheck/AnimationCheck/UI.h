@@ -3,7 +3,8 @@
 
 class UI {
 public:
-
+	//マス目　単独顕現
+	int GRID;
 	//UIのグラフィックハンドル　０：押してない状態　１：押し込み状態
 	int G_frame;
 
@@ -31,5 +32,8 @@ public:
 	void update();
 	void draw();
 	void input_wait();
+
+private:
+	int LOGO;//ロゴのハンドル
 
 };
