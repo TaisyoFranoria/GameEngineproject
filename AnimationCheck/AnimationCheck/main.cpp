@@ -1,5 +1,7 @@
 #include"io.h"
 #include"AnimationEngine2D.h"
+
+
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 
 {
 	SetMainWindowText("２Dアニメーションチェッカー");
