@@ -1,5 +1,6 @@
 #pragma once
 #include"io.h"
+#include"TEXTtoSTR.h"
 #include<vector>
 
 
@@ -30,7 +31,8 @@ public:
 	int lunch;
 	Games ac2d;
 
-	std::vector<const char*> text;
+	TEXTtoSTR* plan_txt;
+	std::vector<TEXTtoSTR*> text;
 	std::vector<const char*> Q1;
 	
 

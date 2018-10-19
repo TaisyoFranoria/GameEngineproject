@@ -27,8 +27,12 @@ void TEXTtoSTR::LoadText(std::string path) {
 	while (getline(ifs, str)) {
 		std::istringstream iss(str);
 		while (getline(iss, str, ',')) {
-			this->texts.push_back(str);
-			//std::cout << "input" << str << std::endl;
+			if (str == std::string(">k")) {
+				this->texts.push_back(" ");
+			}
+			else {
+				this->texts.push_back(str);
+			}
 		}
 	}
 }

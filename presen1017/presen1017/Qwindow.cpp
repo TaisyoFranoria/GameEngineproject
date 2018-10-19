@@ -1,22 +1,29 @@
 #include"Qwindow.h"
 
 
+
 Qwindow::Qwindow() {
 	x = 1100;
 	y = 100;
+
 	gra.push_back(LoadGraph("img/1017/Qwindow1.png"));
 	gra.push_back(LoadGraph("img/1017/Qwindow2.png"));
 	gra.push_back(LoadGraph("img/1017/Qwindow3.png"));
 	gra.push_back(LoadGraph("img/1017/Qwindow4.png"));
+
 	cmt = LoadGraph("img/シキミのコメント.png");
 	State = 0;
 	A = false;
 
+	plan_txt = new TEXTtoSTR("plan.txt");
+
+	text.push_back(new TEXTtoSTR("test.txt"));
+	text.push_back(new TEXTtoSTR("text.txt"));
+	text.push_back(new TEXTtoSTR("test.txt"));
+	text.push_back(new TEXTtoSTR("text.txt"));
+
 	//テスト
-	text.push_back("・対象者：グラフィック\n\n・問題：作った素材（アニメーション）の\n確認がしたい。\n（ゲームとして動かすまでどんなアニメーション\nをするのかわからない）\n");
-	text.push_back("「２Dアニメーションチェッカー」\n\n機能：アニメーション素材を\n読み込み、動きを確認する\n再生・停止・再生速度の変更\nができる\n\nゲーム制作における役割：\nグラフィッカーが自身が作成したアニメーションを\n自分で確認する。\n");
-	text.push_back("テスト方法：\n実際にアニメーション\nを含む画像を読み込んで\n使ってみた。\n\n\n\n\n              これの制作にも役立った→");
-	text.push_back("ゲームエンジンに属すか？：\nゲーム制作に役立ってるので\nゲームエンジンと言える。\n\n意図した通りの\n役割を果たしたか？：果たしている。\n\n使いやすさ：GUIにもこだわったので使いやすいとは思う。\n\n改善点：用途を絞ったので追加するべき機能は限られる。\nあとは使いやすいように工夫するだけ\n");
+	//ここにいろいろ
 	
 	//WritingText("Q/Questions.csv",text,Q1,Q2,Q3,Q4, sizeof items / sizeof items[0]);
 
@@ -37,8 +44,13 @@ Qwindow::Qwindow() {
 }
 
 Qwindow::~Qwindow() {
-	for (int i = 0; i < gra.size(); i++) {
+
+	for (int i = 0, n = (signed)gra.size(); i < n; i++) {
 		DeleteGraph(gra[i]);
+	}
+
+	for (int i = 0, n = (signed)text.size(); i < n; i++) {
+		delete text[i];
 	}
 }
 
@@ -49,7 +61,7 @@ void Qwindow::Qwindow_init() {
 	State = 1;
 	A = false;
 	Current_Num++;
-	if (Current_Num >= text.size())Current_Num = 0;
+	if (Current_Num >= (signed)text.size())Current_Num = 0;
 }
 
 void Qwindow::fmove() {
@@ -64,6 +76,7 @@ void Qwindow::emove() {
 }
 
 void Qwindow::Q(int i) {
+
 	if (Qs >= i) {
 		s = i;
 	}
@@ -92,8 +105,13 @@ void Qwindow::update() {
 }
 
 void Qwindow::view() {
-	DrawExtendGraph(x, y, x + 700, y + 524, gra[Current_Num], TRUE);
-	DrawFormatString(x+50,y+160,GetColor(255,255,255),"%s",text[Current_Num]);
+	DrawExtendGraph(x, y, x + 700, y + 524, gra[stoi(plan_txt->texts[Current_Num])], TRUE);
+	for (int i = 0, n = (signed)text[Current_Num]->texts.size(),kai = 0; i < n; i++) {
+		DrawString(x+50,y+160+kai, text[Current_Num]->texts[i].c_str(), 0x3DFFFF);
+		kai += 32;
+	}
+	//行数確認用
+	//DrawString(x + 50, y + 500, std::to_string((signed)text[Current_Num]->texts.size()).c_str(), 0xFFFFFF);
 	if (Current_Num == 3)DrawGraph(850,0,cmt,TRUE);
 }
 

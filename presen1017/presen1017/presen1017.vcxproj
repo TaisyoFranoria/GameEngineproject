@@ -152,6 +152,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Qwindow.cpp" />
     <ClCompile Include="scene.cpp" />
+    <ClCompile Include="TEXTtoSTR.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +161,7 @@
     <ClInclude Include="io.h" />
     <ClInclude Include="Qwindow.h" />
     <ClInclude Include="scene.h" />
+    <ClInclude Include="TEXTtoSTR.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
