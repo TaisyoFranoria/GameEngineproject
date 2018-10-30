@@ -8,17 +8,20 @@ scene::~scene() {
 	final();
 }
 
+//init関数　UI（ボタンとか）とanimItem(動かすアニメーション）のオブジェクトを生成する
 void scene::init() {
 	scene_Alive = true;
 	anim_ = new animItem();
 	ui = new UI();
 }
 
+//生成したオブジェクトを消す
 void scene::final() {
 	delete anim_;
 	delete ui;
 }
 
+//計算部分　UIへの操作をanimItemに渡す役割も行っている
 void scene::update() {
 	ui->update();
 	if (ui->UP_down)anim_->speed++;
@@ -42,17 +45,3 @@ void scene::update_late() {
 	ui->input_wait();
 }
 
-int scene::playspeed(int speed) {
-	int play_speed;
-
-	switch (speed){
-	case 1:
-		play_speed = 100;
-		break;
-	default:
-		play_speed = 1000;
-		break;
-	}
-
-	return play_speed;
-}

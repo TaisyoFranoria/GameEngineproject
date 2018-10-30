@@ -47,6 +47,7 @@ void animItem::draw() {
 	DrawExtendGraph(x,y,x+384,y+384,gra[play_time],TRUE);
 }
 
+//画像群を読み込む関数
 void animItem::AnimGraph_Load(std::string name){
 	bool success = false;
 	std::string fileh = "img/animation/" + name + "/";
@@ -63,6 +64,7 @@ void animItem::AnimGraph_Load(std::string name){
 	if (!success)this->gra.push_back(LoadGraph("img/animation/nodata.png"));
 }
 
+//変更されたスピードの値を再生速度として反映させるために必要な処理
 int animItem::SPEEDtoLIMIT(int speed) {
 
 	limit - speed;

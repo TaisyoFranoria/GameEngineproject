@@ -1,7 +1,8 @@
 #pragma once
 #include"io.h"
 #include"scene.h"
-
+//AnimationEngine2Dクラスは”アニメーションチェッカーそのもの”のクラス
+//動作内容である”シーン”クラスを管理する。
 
 
 class AnimationEngine2D{

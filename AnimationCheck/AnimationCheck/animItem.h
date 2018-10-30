@@ -2,6 +2,7 @@
 #include"io.h"
 #include<vector>
 #include<string>
+//animItemクラスは”アニメーションさせるもの”をまとめたクラス。画像などを含む
 
 class animItem {
 public:

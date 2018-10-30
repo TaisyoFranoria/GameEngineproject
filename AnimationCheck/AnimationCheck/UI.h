@@ -1,5 +1,6 @@
 #pragma once
 #include"io.h"
+//UI（ユーザーインターフェース。ボタンとかの事）を司る部分
 
 class UI {
 public:
